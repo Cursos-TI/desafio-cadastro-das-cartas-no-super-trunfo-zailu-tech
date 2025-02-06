@@ -3,7 +3,8 @@
 
 
 int main(){
-     printf("Desafio cadastro das cartas");
+     printf("Desafio cadastro das cartas\n");
+     printf("Novo comit\n");
     // Dados da primeira carta
 char estado1[50] , cidade1[50] , codigodaCarta1[50];
 long int populacao1;
