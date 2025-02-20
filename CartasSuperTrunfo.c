@@ -11,7 +11,6 @@ char estado1[50] , estado2[50] , cidade1[50] , cidade2[50] , codigodaCarta1[50],
 long int populacao1, populacao2;
 float area1 , PIB1, area2, PIB2;
 int PontosTuristicos1, PontosTuristicos2;
-float densidadePopulacional1, densidadePopulacional2;
 float PIBperCapita1, PIBperCapita2;
 
 
@@ -20,13 +19,13 @@ printf("\n---------------------------\n");
 printf("Cadastro da primeira carta");
 printf("\n----------------------------\n");
 
-printf("Digite o estado: ");
+printf("Digite o estado: "); // Exemplo pode ser A, B até H
 fgets(estado1, sizeof(estado1), stdin);//Lê o Estado
 estado1[strcspn(estado1, "\n")] ='\0';
 
-printf("Digite o cóigo da carta: ");
+printf("Digite o cóigo da carta: "); // Exemplo A01
 fgets(codigodaCarta1, sizeof(codigodaCarta1), stdin); // Lê o código
-codigodaCarta1[strcspn(codigodaCarta1, "\n")] = '\0';
+codigodaCarta1[strcspn(codigodaCarta1, "\n")] = '\0'; //  Remove a quebra de linha (\n) no final para evita problemas ao exibir, comparar e manipular strings.
     
 
 printf("Digite o nome da cidade: ");
@@ -55,7 +54,7 @@ printf("\n-----------------------------\n");
 printf("Cadastro da segunda carta");
 printf("\n-----------------------------\n");
 printf("Digite o estado: ");
-fgets(estado2, sizeof(estado2), stdin);//Lê o Estado
+fgets(estado2, sizeof(estado2), stdin);//Lê o Estado que é uma string
 estado2[strcspn(estado2, "\n")] ='\0';
 
 printf("Digite o cóigo da carta: ");
@@ -106,6 +105,7 @@ printf("População: %ld\n" , populacao2);
 printf("Área: %.0f km²\n" , area2);
 printf("PIB: %.0f bilhões de reais\n" , PIB2);
 printf("Pontos Turísticos: %d\n" , PontosTuristicos2);
+
 
 
 return 0;
